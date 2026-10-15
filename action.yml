@@ -1,0 +1,30 @@
+name: '2MNY Security Scan'
+description: 'Free website security checks in CI — security headers, TLS/SSL health, and cookie flags — with a full-report link to 2mny.com. Part of the open-source 2MNY Website Vulnerability Scanner family (200+ modules).'
+author: 'RanaKhan77'
+
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+inputs:
+  target:
+    description: 'Website URL to scan (e.g. https://example.com). Required.'
+    required: true
+  fail-on-issues:
+    description: 'Fail the workflow step if any high-severity issue is found (missing HSTS/CSP, expiring/expired TLS).'
+    required: false
+    default: 'false'
+  post-comment:
+    description: 'Post the results as a comment on the triggering pull request.'
+    required: false
+    default: 'true'
+
+outputs:
+  issues-found:
+    description: 'Number of security issues found.'
+  score:
+    description: 'Security score out of 100.'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
