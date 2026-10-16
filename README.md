@@ -1,15 +1,32 @@
 # 🛡️ 2MNY Security Scan — GitHub Action
 
-**Free website security checks in every CI run** — security headers, TLS/SSL certificate health, cookie flags, and directory-listing probes — posted right into your Pull Request. Zero configuration, zero cost, no account needed.
+<a href="https://2mny.com"><img src="docs/banner.png" alt="2MNY Security Scan — Free security checks in every CI run" width="100%"></a>
+
+**Free website security checks in every CI run** — security headers, TLS/SSL certificate health, cookie flags, and directory-listing probes — posted right into your Pull Request. Zero configuration, zero cost, no account, no signup.
 
 Part of the open-source [**2MNY Website Vulnerability Scanner**](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) family — 200+ scanning modules for SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS, headers, and TLS.
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-2MNY%20Security%20Scan-blue?logo=github)](https://github.com/marketplace)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Runtime](https://img.shields.io/badge/runtime-node20-339933?logo=node.js)
-![Checks](https://img.shields.io/badge/free%20checks-10%2B-2ea44f)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Runtime](https://img.shields.io/badge/runtime-node24-339933?logo=node.js)](action.yml)
+[![Checks](https://img.shields.io/badge/free%20checks-10%2B-2ea44f)](#-what-it-checks)
+[![Made by 2MNY](https://img.shields.io/badge/made_by-2MNY_Security-1E3A8A)](https://2mny.com)
 
 ---
+
+## 🔍 What it checks
+
+Every run performs 10+ deterministic checks — no AI, no guessing, every finding is evidence-backed:
+
+| Category | Checks |
+|---|---|
+| 🔐 **Transport** | HTTPS enforced, TLS protocol version, certificate expiry (< 30 days warning, expired = critical), handshake problems |
+| 📋 **Security headers** | Strict-Transport-Security (incl. max-age length), Content-Security-Policy, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy |
+| 🍪 **Cookie security** | Session cookies missing `HttpOnly`, session cookies missing `Secure` |
+| 📂 **Common exposures** | Directory listing enabled on common paths |
+| 🔎 **Configuration** | HSTS misconfigurations, missing baseline hardening |
+
+Findings are severity-ranked (🔴 Critical / 🟠 High / 🟡 Medium) with a plain-language "why it matters" for each issue, plus an overall **security score out of 100**.
 
 ## ⚡ Quickstart (15 seconds)
 
@@ -38,18 +55,18 @@ That's it. Every PR gets a comment like this:
 >
 > | Severity | Issue | Why it matters |
 > |---|---|---|
-> | 🔴 Critical | Site is not served over HTTPS | ... |
+> | 🔴 Critical | Site is not served over HTTPS | Everything you send — logins, cookies, form data — travels in plaintext. |
 > | 🟠 High | Missing Strict-Transport-Security header | Forces HTTPS, prevents downgrade attacks. |
 > | 🟠 High | Missing Content-Security-Policy header | Prevents XSS and content injection. |
 > | 🟡 Medium | Missing X-Content-Type-Options header | Stops MIME-type sniffing. |
 
-## 📥 Inputs
+## ⚙️ Inputs
 
 | Input | Required | Default | Description |
 |---|---|---|---|
 | `target` | ✅ | — | Website URL to scan (e.g. `https://example.com`) |
-| `fail-on-issues` | ❌ | `false` | Fail the step if any high/critical issue is found — use as a security gate |
-| `post-comment` | ❌ | `true` | Post results as a PR comment (only on `pull_request` events) |
+| `fail-on-issues` | ❌ | `false` | Fail the workflow step if any high-severity issue is found (missing HSTS/CSP, expiring/expired TLS) |
+| `post-comment` | ❌ | `true` | Post the results as a comment on the triggering pull request |
 
 ## 📤 Outputs
 
@@ -58,36 +75,22 @@ That's it. Every PR gets a comment like this:
 | `issues-found` | Number of security issues found |
 | `score` | Security score out of 100 |
 
-## 🔍 What it checks (free, standalone, in your runner)
+## 💡 Why free?
 
-- **HTTPS enforcement** — plain-HTTP final targets are flagged critical
-- **6 security headers** — HSTS (with max-age validation), CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy
-- **TLS/SSL health** — protocol version (TLS 1.0/1.1 flagged), cipher, certificate expiry (< 21 days = high, expired = critical), issuer
-- **Session cookie flags** — missing `Secure` / `HttpOnly` on session cookies
-- **Directory listing exposure** — probes for open autoindex
+This action is the CI-sized tip of a much bigger iceberg. The same team runs [**2mny.com**](https://2mny.com) — a full security scanning platform with **282 online checkers** and a hosted scanner suite (200+ open-source modules: SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS deep-dives, TLS analysis, OSINT exposure checks). The GitHub Action is our way of putting basic hygiene checks where developers actually work — in the PR.
 
-No data leaves your runner except the HTTP(S) requests to the target you specify. The action never sends your code anywhere.
+Need more than headers and TLS?
 
-## 🚀 Full 200+ module scan
+- 🧰 **Self-host the full engine:** [Website-Vulnerability-Scanner](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) — 200 deterministic modules, Apache-2.0
+- ☁️ **Managed scans + professional CVSS-scored PDF reports:** [2mny.com](https://2mny.com)
+- 📚 **438 curated free security tools:** [Awesome Cyber Security Heaven](https://github.com/RanaKhan77/awesome-cyber-security-heaven)
 
-This action is the quick CI check. For the deep audit — SQLi, XSS, SSRF, SSTI, subdomain takeover, WordPress/CMS deep enumeration, TLS deep-dive with CVSS-scored, evidence-backed reports:
+## 🤝 Family
 
-- 🧰 **Self-hosted, open source:** [Website-Vulnerability-Scanner](https://github.com/RanaKhan77/Website-Vulnerability-Scanner)
-- ☁️ **Managed scans + professional PDF reports:** [2mny.com](https://2mny.com)
-
-## 📰 Example: gate merges on security
-
-```yaml
-      - uses: RanaKhan77/2mny-security-scan@v1
-        with:
-          target: https://staging.example.com
-          fail-on-issues: true
-```
+- [Website-Vulnerability-Scanner](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) — the full open-source scanning suite this action is built from
+- [awesome-cyber-security-heaven](https://github.com/RanaKhan77/awesome-cyber-security-heaven) — 438 license-verified free security tools across 14 realms
+- [2mny.com](https://2mny.com) — the hosted platform
 
 ## 📄 License
 
-MIT — see [LICENSE](LICENSE).
-
-## 🐛 Issues & PRs
-
-Found a bug or a false positive? [Open an issue](https://github.com/RanaKhan77/2mny-security-scan/issues) — reports with a repro URL get fixed fastest.
+[MIT](LICENSE) — free for personal and commercial use.
