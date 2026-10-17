@@ -77,7 +77,7 @@ That's it. Every PR gets a comment like this:
 
 ## 💡 Why free?
 
-This action is the CI-sized tip of a much bigger iceberg. The same team runs [**2mny.com**](https://2mny.com) — a full security scanning platform with **282 online checkers** and a hosted scanner suite (200+ open-source modules: SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS deep-dives, TLS analysis, OSINT exposure checks). The GitHub Action is our way of putting basic hygiene checks where developers actually work — in the PR.
+This action is the CI-sized tip of a much bigger iceberg. The same team runs [**2mny.com**](https://2mny.com) — a full security scanning platform with **285 live scanner modules** and a hosted scanner suite (including the 200+ open-source Community Edition modules: SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS deep-dives, TLS analysis, OSINT exposure checks). The GitHub Action is our way of putting basic hygiene checks where developers actually work — in the PR.
 
 Need more than headers and TLS?
 
