@@ -1,5 +1,5 @@
 name: '2MNY Security Scan'
-description: 'Free website security checks in CI — security headers, TLS/SSL health, and cookie flags — with a full-report link to 2mny.com. Part of the open-source 2MNY Website Vulnerability Scanner family (200+ modules).'
+description: 'Free CI security checks — TLS/SSL health, security headers, cookie flags — with a full report from 2mny.com.'
 author: 'RanaKhan77'
 
 branding:
