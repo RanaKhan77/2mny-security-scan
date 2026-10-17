@@ -6,7 +6,7 @@
 
 Part of the open-source [**2MNY Website Vulnerability Scanner**](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) family — 200+ scanning modules for SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS, headers, and TLS.
 
-[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-2MNY%20Security%20Scan-blue?logo=github)](https://github.com/marketplace)
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-2MNY%20Security%20Scan-blue?logo=github)](https://github.com/marketplace/actions/2mny-security-scan)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Runtime](https://img.shields.io/badge/runtime-node24-339933?logo=node.js)](action.yml)
 [![Checks](https://img.shields.io/badge/free%20checks-10%2B-2ea44f)](#-what-it-checks)
