@@ -4,7 +4,7 @@
 
 **Free website security checks in every CI run** — security headers, TLS/SSL certificate health, cookie flags, and directory-listing probes — posted right into your Pull Request. Zero configuration, zero cost, no account, no signup.
 
-Part of the open-source [**2MNY Website Vulnerability Scanner**](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) family — 200+ scanning modules for SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS, headers, and TLS.
+Part of the open-source [**2MNY Website Vulnerability Scanner**](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) family — 201+ scanning modules for SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS, headers, and TLS.
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-2MNY%20Security%20Scan-blue?logo=github)](https://github.com/marketplace/actions/2mny-security-scan)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -77,11 +77,11 @@ That's it. Every PR gets a comment like this:
 
 ## 💡 Why free?
 
-This action is the CI-sized tip of a much bigger iceberg. The same team runs [**2mny.com**](https://2mny.com) — a full security scanning platform with **285 live scanner modules** and a hosted scanner suite (including the 200+ open-source Community Edition modules: SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS deep-dives, TLS analysis, OSINT exposure checks). The GitHub Action is our way of putting basic hygiene checks where developers actually work — in the PR.
+This action is the CI-sized tip of a much bigger iceberg. The same team runs [**2mny.com**](https://2mny.com) — a full security scanning platform with **291 scanner modules** and a hosted scanner suite (including the 201 open-source Community Edition modules: SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS deep-dives, TLS analysis, OSINT exposure checks). The GitHub Action is our way of putting basic hygiene checks where developers actually work — in the PR.
 
 Need more than headers and TLS?
 
-- 🧰 **Self-host the full engine:** [Website-Vulnerability-Scanner](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) — 200 deterministic modules, Apache-2.0
+- 🧰 **Self-host the full engine:** [Website-Vulnerability-Scanner](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) — 201 deterministic modules, Apache-2.0
 - ☁️ **Managed scans + professional CVSS-scored PDF reports:** [2mny.com](https://2mny.com)
 - 📚 **444 curated free security tools:** [Awesome Cyber Security Heaven](https://github.com/RanaKhan77/awesome-cyber-security-heaven)
 
