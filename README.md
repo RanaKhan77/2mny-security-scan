@@ -4,7 +4,7 @@
 
 **Free website security checks in every CI run** — security headers, TLS/SSL certificate health, cookie flags, and directory-listing probes — posted right into your Pull Request. Zero configuration, zero cost, no account, no signup.
 
-Part of the open-source [**2MNY Website Vulnerability Scanner**](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) family — 218+ scanning modules for SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS, headers, and TLS.
+Part of the open-source [**2MNY Website Vulnerability Scanner**](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) family — 218 scanning modules for SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS, headers, and TLS.
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-2MNY%20Security%20Scan-blue?logo=github)](https://github.com/marketplace/actions/2mny-security-scan)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
