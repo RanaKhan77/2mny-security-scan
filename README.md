@@ -85,12 +85,12 @@ Need more than headers and TLS?
 
 - 🧰 **Self-host the full engine:** [Website-Vulnerability-Scanner](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) — 218 deterministic modules, Apache-2.0
 - ☁️ **Managed scans + professional CVSS-scored PDF reports:** [2mny.com](https://2mny.com)
-- 📚 **1458 curated free security tools:** [Awesome Cyber Security Heaven](https://github.com/RanaKhan77/awesome-cyber-security-heaven)
+- 📚 **1413 curated free security tools:** [Awesome Cyber Security Heaven](https://github.com/RanaKhan77/awesome-cyber-security-heaven)
 
 ## 🤝 Family
 
 - [Website-Vulnerability-Scanner](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) — the full open-source scanning suite this action is built from
-- [awesome-cyber-security-heaven](https://github.com/RanaKhan77/awesome-cyber-security-heaven) — 444 license-verified free security tools across 14 realms
+- [awesome-cyber-security-heaven](https://github.com/RanaKhan77/awesome-cyber-security-heaven) — 1413 license-verified free security tools across 14 realms
 - [2mny.com](https://2mny.com) — the hosted platform
 
 ## 📄 License
