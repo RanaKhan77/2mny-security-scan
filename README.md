@@ -77,7 +77,7 @@ That's it. Every PR gets a comment like this:
 
 ## 💡 Why free?
 
-This action is the CI-sized tip of a much bigger iceberg. The same team runs [**2mny.com**](https://2mny.com) — a full security scanning platform with **330 scanner modules** and a hosted scanner suite (including the 218 open-source Community Edition modules: SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS deep-dives, TLS analysis, OSINT exposure checks). The GitHub Action is our way of putting basic hygiene checks where developers actually work — in the PR.
+This action is the CI-sized tip of a much bigger iceberg. The same team runs [**2mny.com**](https://2mny.com) — a full security scanning platform with **333 scanner modules** and a hosted scanner suite (including the 218 open-source Community Edition modules: SQLi, XSS, SSRF, SSTI, subdomain takeover, CMS deep-dives, TLS analysis, OSINT exposure checks). The GitHub Action is our way of putting basic hygiene checks where developers actually work — in the PR.
 
 **The open-source family:** [Website Vulnerability Scanner CE](https://github.com/RanaKhan77/Website-Vulnerability-Scanner) (218 deterministic modules) · [Exposure-Check-OSINT](https://github.com/RanaKhan77/Exposure-Check-OSINT) (self-hosted breach & exposure checker — 317 keyless site checks) · [awesome-cyber-security-heaven](https://github.com/RanaKhan77/awesome-cyber-security-heaven) (1475 curated free security tools).
 
